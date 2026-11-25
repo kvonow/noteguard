@@ -1,0 +1,35 @@
+import fs from 'node:fs';
+import vm from 'node:vm';
+import assert from 'node:assert/strict';
+import {createRequire} from 'node:module';
+const require=createRequire(import.meta.url);
+const canvas=require('/Users/kwonhaewon/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/@napi-rs/canvas');
+globalThis.DOMMatrix=canvas.DOMMatrix;globalThis.Path2D=canvas.Path2D;globalThis.ImageData=canvas.ImageData;
+const pdfjs=await import('../dist/vendor/pdf.min.mjs');
+pdfjs.GlobalWorkerOptions.workerSrc=new URL('../dist/vendor/pdf.worker.min.mjs',import.meta.url).href;
+const examBytes=fs.readFileSync('dist/assets/exam.pdf');
+const questionBytes=fs.readFileSync('dist/assets/practice.pdf');
+const exam=await pdfjs.getDocument({data:new Uint8Array(examBytes)}).promise;
+const questions=await pdfjs.getDocument({data:new Uint8Array(questionBytes)}).promise;
+assert.equal(exam.numPages,20);assert.equal(questions.numPages,46);
+const page=await exam.getPage(1);const view=page.getViewport({scale:1});assert.equal(view.width,842);assert.equal(view.height,1191);
+console.log('PASS: PDF.js reads original 20 pages and 46-question document; original crop restored.');
+const storage=new Map();const nodes=new Map();
+function mockNode(){return {innerHTML:'',textContent:'',style:{},classList:{add(){},remove(){},toggle(){}},focus(){},click(){},querySelector(){return null}}}
+for(const s of ['#app','#toast','#modal-root','[data-action="export"]'])nodes.set(s,mockNode());
+let blob;
+const sandbox={console,pdfjs,structuredClone,Uint8Array,ArrayBuffer,Date,Math,Number,String,JSON,Promise,parseInt,devicePixelRatio:1,PDFLib:null,Blob,setTimeout(fn,ms){return setTimeout(fn,Math.min(ms||0,10))},clearTimeout,history:{replaceState(){}},window:{scrollTo(){},addEventListener(){}},localStorage:{getItem:k=>storage.get(k),setItem:(k,v)=>storage.set(k,v)},document:{querySelector:s=>nodes.get(s)||null,querySelectorAll:()=>[],addEventListener(){},createElement:()=>({click(){}})},URL:{createObjectURL(b){blob=b;return 'blob:test'},revokeObjectURL(){}},fetch:async()=>{throw Error('unexpected fetch')}};
+vm.createContext(sandbox);vm.runInContext(fs.readFileSync('dist/vendor/pdf-lib.min.js','utf8'),sandbox);
+let code=fs.readFileSync('dist/app.js','utf8').replace(/^import .*\n/,'').replace(/^pdfjs.GlobalWorkerOptions.*\n/m,'');code=code.slice(0,code.lastIndexOf("try{db=await initDB()"));
+vm.runInContext(code+`;globalThis.api={state,go,home,library,upload,uploaded,result,notebook,detail,feedback,similarIntro,reviewDone,insights,editor,inkKey,currentInk,saveInk,drawStroke,pushUndo,exportPDF,checkSimilar};`,sandbox);
+const api=sandbox.api;api.state.doc={id:'demo-exam',name:'테스트',demo:true};api.state.pdf=exam;api.state.bytes=examBytes.buffer.slice(examBytes.byteOffset,examBytes.byteOffset+examBytes.byteLength);
+for(const name of ['home','library','upload','uploaded','result','notebook','detail','feedback','similarIntro','reviewDone','insights','editor'])assert.ok(api[name]().length>200,name);
+api.state.graded=true;assert.match(api.notebook(),/5번 문제/);api.state.reviewed=true;api.state.filter='done';assert.match(api.notebook(),/복습 완료/);api.state.filter='todo';assert.match(api.notebook(),/이 목록은 아직 비어/);
+api.state.mode='exam';api.state.page=1;const first=api.inkKey();api.state.ink[first]=[{color:'#233c34',width:2,points:[{x:.2,y:.3},{x:.5,y:.4}]}];api.saveInk();assert.ok(storage.get('ng-ink').includes(first));api.state.page=2;assert.equal(api.currentInk().length,0);api.state.page=1;assert.equal(api.currentInk().length,1);
+const inkCanvas=canvas.createCanvas(800,1000);api.drawStroke(inkCanvas.getContext('2d'),api.currentInk()[0],800,1000);assert.ok(inkCanvas.getContext('2d').getImageData(160,300,1,1).data[3]>0);
+await api.exportPDF();assert.ok(blob&&blob.size>10000);const exported=await sandbox.PDFLib.PDFDocument.load(new Uint8Array(await blob.arrayBuffer()));assert.equal(exported.getPageCount(),20);const roundtrip=await pdfjs.getDocument({data:new Uint8Array(await blob.arrayBuffer())}).promise;assert.equal(roundtrip.numPages,20);
+console.log('PASS: All screen generators, notebook filters, page-specific ink, persisted strokes, canvas line rendering, PDF export and reopen.');
+// Verify every static referenced asset and local module exists.
+for(const path of [...fs.readFileSync('dist/app.js','utf8').matchAll(/(?:src=\"|fetch\(')(assets\/[\w.-]+)/g)].map(m=>m[1]))assert.ok(fs.existsSync('dist/'+path),path);
+assert.match(api.feedback(),/22<\/strong>/);assert.match(api.result(),/<td>5번<\/td><td>③<\/td><td>①<\/td>/);
+console.log('PASS: Question 5 feedback and answer match original PDF; all referenced static assets exist.');
