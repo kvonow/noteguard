@@ -1,0 +1,600 @@
+[
+  {
+    "output_page": 1,
+    "source_page": 1,
+    "subject": "공통",
+    "question": 1,
+    "crop": [
+      82,
+      268.24390000000005,
+      417,
+      352.83198000000004
+    ],
+    "scale": 1.5
+  },
+  {
+    "output_page": 2,
+    "source_page": 1,
+    "subject": "공통",
+    "question": 2,
+    "crop": [
+      82,
+      613.5439,
+      417,
+      714.27514
+    ],
+    "scale": 1.5
+  },
+  {
+    "output_page": 3,
+    "source_page": 1,
+    "subject": "공통",
+    "question": 3,
+    "crop": [
+      431,
+      211.84390000000008,
+      761,
+      350.31373999999994
+    ],
+    "scale": 1.5
+  },
+  {
+    "output_page": 4,
+    "source_page": 1,
+    "subject": "공통",
+    "question": 4,
+    "crop": [
+      431,
+      613.9039,
+      761,
+      782.85198
+    ],
+    "scale": 1.5
+  },
+  {
+    "output_page": 5,
+    "source_page": 2,
+    "subject": "공통",
+    "question": 5,
+    "crop": [
+      82,
+      147.284,
+      417,
+      229.35764000000006
+    ],
+    "scale": 1.5
+  },
+  {
+    "output_page": 6,
+    "source_page": 2,
+    "subject": "공통",
+    "question": 6,
+    "crop": [
+      82,
+      591.6439,
+      417,
+      704.28592
+    ],
+    "scale": 1.5
+  },
+  {
+    "output_page": 7,
+    "source_page": 2,
+    "subject": "공통",
+    "question": 7,
+    "crop": [
+      431,
+      147.34390000000008,
+      761,
+      239.49208
+    ],
+    "scale": 1.5
+  },
+  {
+    "output_page": 8,
+    "source_page": 3,
+    "subject": "공통",
+    "question": 8,
+    "crop": [
+      82,
+      140.98389999999995,
+      417,
+      333.99278000000004
+    ],
+    "scale": 1.5
+  },
+  {
+    "output_page": 9,
+    "source_page": 3,
+    "subject": "공통",
+    "question": 9,
+    "crop": [
+      82,
+      602.8639000000001,
+      417,
+      778.59198
+    ],
+    "scale": 1.5
+  },
+  {
+    "output_page": 10,
+    "source_page": 3,
+    "subject": "공통",
+    "question": 10,
+    "crop": [
+      431,
+      140.98389999999995,
+      761,
+      270.09428
+    ],
+    "scale": 1.5
+  },
+  {
+    "output_page": 11,
+    "source_page": 4,
+    "subject": "공통",
+    "question": 11,
+    "crop": [
+      82,
+      146.98389999999995,
+      417,
+      297.39198
+    ],
+    "scale": 1.5
+  },
+  {
+    "output_page": 12,
+    "source_page": 4,
+    "subject": "공통",
+    "question": 12,
+    "crop": [
+      431,
+      146.6839,
+      761,
+      559.02592
+    ],
+    "scale": 1.5
+  },
+  {
+    "output_page": 13,
+    "source_page": 5,
+    "subject": "공통",
+    "question": 13,
+    "crop": [
+      82,
+      140.98389999999995,
+      417,
+      538.6569400000001
+    ],
+    "scale": 1.5
+  },
+  {
+    "output_page": 14,
+    "source_page": 5,
+    "subject": "공통",
+    "question": 14,
+    "crop": [
+      431,
+      140.98389999999995,
+      761,
+      358.23198
+    ],
+    "scale": 1.5
+  },
+  {
+    "output_page": 15,
+    "source_page": 6,
+    "subject": "공통",
+    "question": 15,
+    "crop": [
+      82,
+      140.98389999999995,
+      417,
+      371.88592000000006
+    ],
+    "scale": 1.5
+  },
+  {
+    "output_page": 16,
+    "source_page": 6,
+    "subject": "공통",
+    "question": 16,
+    "crop": [
+      431,
+      186.04399999999998,
+      761,
+      248.61311999999998
+    ],
+    "scale": 1.5
+  },
+  {
+    "output_page": 17,
+    "source_page": 6,
+    "subject": "공통",
+    "question": 17,
+    "crop": [
+      431,
+      614.0239,
+      761,
+      675.87198
+    ],
+    "scale": 1.5
+  },
+  {
+    "output_page": 18,
+    "source_page": 7,
+    "subject": "공통",
+    "question": 18,
+    "crop": [
+      82,
+      140.98389999999995,
+      417,
+      288.63339999999994
+    ],
+    "scale": 1.5
+  },
+  {
+    "output_page": 19,
+    "source_page": 7,
+    "subject": "공통",
+    "question": 19,
+    "crop": [
+      82,
+      599.0839,
+      417,
+      681.75694
+    ],
+    "scale": 1.5
+  },
+  {
+    "output_page": 20,
+    "source_page": 7,
+    "subject": "공통",
+    "question": 20,
+    "crop": [
+      431,
+      140.98389999999995,
+      761,
+      946.3859199999999
+    ],
+    "scale": 0.9559074609720994
+  },
+  {
+    "output_page": 21,
+    "source_page": 8,
+    "subject": "공통",
+    "question": 21,
+    "crop": [
+      82,
+      140.98389999999995,
+      417,
+      361.00100710000004
+    ],
+    "scale": 1.5
+  },
+  {
+    "output_page": 22,
+    "source_page": 8,
+    "subject": "공통",
+    "question": 22,
+    "crop": [
+      431,
+      140.98389999999995,
+      761,
+      383.24980000000005
+    ],
+    "scale": 1.5
+  },
+  {
+    "output_page": 23,
+    "source_page": 9,
+    "subject": "확률과 통계",
+    "question": 23,
+    "crop": [
+      82,
+      256.9039,
+      417,
+      349.29197999999997
+    ],
+    "scale": 1.5
+  },
+  {
+    "output_page": 24,
+    "source_page": 9,
+    "subject": "확률과 통계",
+    "question": 24,
+    "crop": [
+      431,
+      211.84390000000008,
+      761,
+      373.32592
+    ],
+    "scale": 1.5
+  },
+  {
+    "output_page": 25,
+    "source_page": 10,
+    "subject": "확률과 통계",
+    "question": 25,
+    "crop": [
+      82,
+      148.84390000000008,
+      417,
+      230.91754000000003
+    ],
+    "scale": 1.5
+  },
+  {
+    "output_page": 26,
+    "source_page": 10,
+    "subject": "확률과 통계",
+    "question": 26,
+    "crop": [
+      431,
+      148.96390000000008,
+      761,
+      273.48591999999996
+    ],
+    "scale": 1.5
+  },
+  {
+    "output_page": 27,
+    "source_page": 11,
+    "subject": "확률과 통계",
+    "question": 27,
+    "crop": [
+      82,
+      141.34390000000008,
+      417,
+      341.61198
+    ],
+    "scale": 1.5
+  },
+  {
+    "output_page": 28,
+    "source_page": 11,
+    "subject": "확률과 통계",
+    "question": 28,
+    "crop": [
+      431,
+      140.98389999999995,
+      761,
+      574.56592
+    ],
+    "scale": 1.5
+  },
+  {
+    "output_page": 29,
+    "source_page": 12,
+    "subject": "확률과 통계",
+    "question": 29,
+    "crop": [
+      82,
+      186.04399999999998,
+      417,
+      316.00100710000004
+    ],
+    "scale": 1.5
+  },
+  {
+    "output_page": 30,
+    "source_page": 12,
+    "subject": "확률과 통계",
+    "question": 30,
+    "crop": [
+      431,
+      140.98389999999995,
+      761,
+      428.02099610000005
+    ],
+    "scale": 1.5
+  },
+  {
+    "output_page": 31,
+    "source_page": 13,
+    "subject": "미적분",
+    "question": 23,
+    "crop": [
+      82,
+      262.9639000000001,
+      417,
+      358.38592000000006
+    ],
+    "scale": 1.5
+  },
+  {
+    "output_page": 32,
+    "source_page": 13,
+    "subject": "미적분",
+    "question": 24,
+    "crop": [
+      431,
+      218.14390000000003,
+      761,
+      300.27754000000004
+    ],
+    "scale": 1.5
+  },
+  {
+    "output_page": 33,
+    "source_page": 14,
+    "subject": "미적분",
+    "question": 25,
+    "crop": [
+      82,
+      146.98389999999995,
+      417,
+      301.47374
+    ],
+    "scale": 1.5
+  },
+  {
+    "output_page": 34,
+    "source_page": 14,
+    "subject": "미적분",
+    "question": 26,
+    "crop": [
+      431,
+      146.80389999999989,
+      761,
+      589.8410034
+    ],
+    "scale": 1.5
+  },
+  {
+    "output_page": 35,
+    "source_page": 15,
+    "subject": "미적분",
+    "question": 27,
+    "crop": [
+      82,
+      141.34390000000008,
+      417,
+      360.66602
+    ],
+    "scale": 1.5
+  },
+  {
+    "output_page": 36,
+    "source_page": 15,
+    "subject": "미적분",
+    "question": 28,
+    "crop": [
+      431,
+      140.98389999999995,
+      761,
+      563.201004
+    ],
+    "scale": 1.5
+  },
+  {
+    "output_page": 37,
+    "source_page": 16,
+    "subject": "미적분",
+    "question": 29,
+    "crop": [
+      82,
+      186.04399999999998,
+      417,
+      467.1934
+    ],
+    "scale": 1.5
+  },
+  {
+    "output_page": 38,
+    "source_page": 16,
+    "subject": "미적분",
+    "question": 30,
+    "crop": [
+      431,
+      151.1839,
+      761,
+      312.33694
+    ],
+    "scale": 1.5
+  },
+  {
+    "output_page": 39,
+    "source_page": 17,
+    "subject": "기하",
+    "question": 23,
+    "crop": [
+      82,
+      257.624,
+      417,
+      349.77198
+    ],
+    "scale": 1.5
+  },
+  {
+    "output_page": 40,
+    "source_page": 17,
+    "subject": "기하",
+    "question": 24,
+    "crop": [
+      431,
+      211.84390000000008,
+      761,
+      323.13198
+    ],
+    "scale": 1.5
+  },
+  {
+    "output_page": 41,
+    "source_page": 18,
+    "subject": "기하",
+    "question": 25,
+    "crop": [
+      82,
+      140.98389999999995,
+      417,
+      236.19678
+    ],
+    "scale": 1.5
+  },
+  {
+    "output_page": 42,
+    "source_page": 18,
+    "subject": "기하",
+    "question": 26,
+    "crop": [
+      431,
+      140.98389999999995,
+      761,
+      482.79197999999997
+    ],
+    "scale": 1.5
+  },
+  {
+    "output_page": 43,
+    "source_page": 19,
+    "subject": "기하",
+    "question": 27,
+    "crop": [
+      82,
+      141.34390000000008,
+      417,
+      325.56592
+    ],
+    "scale": 1.5
+  },
+  {
+    "output_page": 44,
+    "source_page": 19,
+    "subject": "기하",
+    "question": 28,
+    "crop": [
+      431,
+      140.98389999999995,
+      761,
+      566.201004
+    ],
+    "scale": 1.5
+  },
+  {
+    "output_page": 45,
+    "source_page": 20,
+    "subject": "기하",
+    "question": 29,
+    "crop": [
+      82,
+      186.04399999999998,
+      417,
+      564.2810059
+    ],
+    "scale": 1.5
+  },
+  {
+    "output_page": 46,
+    "source_page": 20,
+    "subject": "기하",
+    "question": 30,
+    "crop": [
+      431,
+      140.98389999999995,
+      761,
+      341.67197999999996
+    ],
+    "scale": 1.5
+  }
+]
